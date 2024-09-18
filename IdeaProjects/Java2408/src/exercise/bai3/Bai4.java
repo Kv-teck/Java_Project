@@ -9,14 +9,12 @@ public class Bai4 {
         System.out.println("Giá trị ban đầu của n là: " + n);
         int sum = 0;
 
-        while(n > 0)
-
-        {
+        while (n > 0) {
             int lastDigit = n % 10;
             sum = sum * 10 + lastDigit;
             n /= 10;
         }
-        System.out.println("Số đảo ngược là: "+sum);
+        System.out.println("Số đảo ngược là: " + sum);
     }
 
 }

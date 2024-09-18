@@ -7,6 +7,7 @@ public class Bai5 {
 //            9 -> 1001
 //            16 -> 10000
     public static void main(String[] args) {
+        int n = 8;
 
     }
 }
