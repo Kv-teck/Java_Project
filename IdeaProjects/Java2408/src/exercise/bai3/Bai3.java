@@ -8,8 +8,8 @@ public class Bai3 {
     }
 
     static void USCLN_va_BSCNN() {
-        int a = 15;
-        int b = 20;
+        int a = 12;
+        int b = 8;
 
     }
 }
