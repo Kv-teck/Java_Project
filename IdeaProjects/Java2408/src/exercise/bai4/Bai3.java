@@ -7,32 +7,29 @@ public class Bai3 {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Nhập 12 chữ số đầu của ISBN-13: ");
-        String isbn12 = scanner.nextLine();
+        String isbn = scanner.nextLine();
 
 
-        if (isbn12.length() != 12) {
+        if (isbn.length() != 12) {
             System.out.println("Chuỗi phải có đúng 12 ký tự.");
-        } else {
+            return;
+        }
+        int digit13 = 0;
+        for (int d = 1; d <= isbn.length(); d++) {
+            int value = Character.getNumericValue(isbn.charAt(d - 1));
 
-            boolean isValid = true;
-            for (int i = 0; i < isbn12.length(); i++) {
-                char ch = isbn12.charAt(i);
-
-                if (!Character.isDigit(ch)) {
-                    isValid = false;
-                    break;
-                }
-            }
-
-
-            if (isValid) {
-                System.out.println("Chuỗi hợp lệ: " + isbn12);
-
+            if (d % 2 == 0) {
+                digit13 = digit13 + 3 * value;
             } else {
-                System.out.println("Chuỗi chứa ký tự không phải là số.");
+                digit13 = digit13 + value;
             }
         }
+        digit13 = 10 - digit13 % 10;
+        if (digit13 == 10) {
+            digit13 = 0;
+        }
 
+        System.out.println("ISBN-13 đầy đủ là: " + isbn + digit13);
         scanner.close();
     }
 }
