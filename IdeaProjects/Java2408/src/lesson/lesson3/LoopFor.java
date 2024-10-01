@@ -1,4 +1,4 @@
-package lesson3;
+package lesson.lesson3;
 
 public class LoopFor {
     public static void main(String[] args) {
