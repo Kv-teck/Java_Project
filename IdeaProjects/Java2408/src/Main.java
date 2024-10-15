@@ -1,4 +1,3 @@
-import com.sun.source.tree.WhileLoopTree;
 
 import java.util.Scanner;
 
@@ -77,7 +76,7 @@ public class Main {
         while (Math.pow(m, 3) < 12000) {
             m++;
         }
-        System.out.println((int)m);
+        System.out.println((int) m);
     }
 
 }
